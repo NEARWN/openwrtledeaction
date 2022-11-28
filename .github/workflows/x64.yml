@@ -10,7 +10,7 @@ name: OpenWrt firmware X64
 on: 
 
   schedule:
-    - cron: 0 20 * * 5
+    - cron: 0 20 * * *
   
 jobs:
   build:
