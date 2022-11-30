@@ -8,7 +8,7 @@
 name: OpenWrt firmware X64 music
 
 on: 
-
+  repository_dispatch:
   schedule:
     - cron: 0 20 * * *
   
