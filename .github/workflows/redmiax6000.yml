@@ -94,5 +94,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt firmware redmiax6000${{ env.FILE_DATE }}
+        name: OpenWrt firmware redmiax6000
         path: openwrt/bin
