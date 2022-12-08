@@ -65,7 +65,7 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Import external feeds - openwrt-mos mosdns
+    - name: Import external feeds - openwrt-mos
       working-directory: ./openwrt
       run: |
         rm -rf feeds/packages/net/mosdns
