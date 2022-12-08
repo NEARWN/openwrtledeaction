@@ -56,7 +56,14 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default      
+  
+    - name: Update & Install feeds
+      working-directory: ./openwrt
+      run: |
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
+        ./scripts/feeds install -a
         
     - name: Import external feeds - mosdns
       working-directory: ./openwrt
@@ -66,15 +73,8 @@ jobs:
         rm -rf feeds/ssrp/v2ray-geodata
         git clone https://github.com/sbwml/v2ray-geodata feeds/ssrp/v2ray-geodata
         git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
-    #    git clone "your_github_link" package/"your_folder_name"    
-        
-    - name: Update & Install feeds
-      working-directory: ./openwrt
-      run: |
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
-        ./scripts/feeds install -a
-        
+    #    git clone "your_github_link" package/"your_folder_name" 
+
     - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'config/x64.config'
