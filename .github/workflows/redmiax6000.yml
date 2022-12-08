@@ -64,7 +64,14 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-        
+
+    - name: Import external feeds - openwrt-mos mosdns
+      working-directory: ./openwrt
+      run: |
+        rm -rf feeds/packages/net/mosdns
+        git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
+    #    git clone "your_github_link" package/"your_folder_name" 
+
     #- name: Import external feeds - music
     #  working-directory: ./openwrt
     #  run: |
