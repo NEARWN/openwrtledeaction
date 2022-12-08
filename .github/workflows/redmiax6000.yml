@@ -68,7 +68,8 @@ jobs:
     - name: Import external feeds - openwrt-mos
       working-directory: ./openwrt
       run: |
-        rm -rf feeds/packages/net/mosdns
+        rm -rf feeds/luci/applications/luci-app-mosdns
+        rm -rf feeds/packages/net/mosdns        
         git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
     #    git clone "your_github_link" package/"your_folder_name" 
 
