@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: OpenWrt firmware redmiac2100
+name: OpenWrt firmware redmiac2100 openwrt-glt
 
 on: 
   workflow_dispatch:
@@ -93,5 +93,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt firmware redmiac2100
+        name: OpenWrt firmware redmiac2100 openwrt-glt
         path: openwrt/bin
