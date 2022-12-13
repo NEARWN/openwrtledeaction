@@ -9,8 +9,8 @@ name: OpenWrt firmware k2p openwrt-glt
 
 on: 
   workflow_dispatch:
-  schedule:
-    - cron: 0 20 * * 5
+  #schedule:
+  #  - cron: 0 20 * * 5
   
 jobs:
   build:
