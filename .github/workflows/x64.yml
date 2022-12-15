@@ -71,9 +71,8 @@ jobs:
         rm -rf feeds/luci/applications/luci-app-mosdns
         rm -rf feeds/packages/net/mosdns
         rm -rf feeds/ssrp/v2ray-geodata
-    #    git clone https://github.com/sbwml/v2ray-geodata feeds/ssrp/v2ray-geodata
         git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
-   
+
     - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'config/x64.config'
