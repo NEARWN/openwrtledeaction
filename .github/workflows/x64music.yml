@@ -100,3 +100,9 @@ jobs:
       with:
         name: OpenWrt firmware X64 music
         path: openwrt/bin
+
+    - name: Delete workflow runs
+      uses: GitRML/delete-workflow-runs@main
+      with:
+        retain_days: 5
+        keep_minimum_runs: 7
