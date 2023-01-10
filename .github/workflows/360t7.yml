@@ -49,7 +49,7 @@ jobs:
        
     - name: Configuration Customization
       env:
-        CONFIG_FILE: 'lede/360t7.config'
+        CONFIG_FILE: 'config/360t7.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         cd openwrt && make defconfig
