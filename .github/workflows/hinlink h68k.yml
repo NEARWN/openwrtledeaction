@@ -10,7 +10,7 @@ name: OpenWrt firmware rockchip hinlink h68k
 on: 
   workflow_dispatch:
   schedule:
-    - cron: 0 20 * * 5
+    - cron: 0 20 * * *
   
 jobs:
   build:
